@@ -1,0 +1,15 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+kafka:
+  bootstrap:
+    servers: localhost:9092
+  messagesInput:
+    topic: messagesInput-topic
+server:
+  port: 8081
+
+delivery:
+  redis:
+    active-user-key: active-users
