@@ -13,3 +13,12 @@ server:
 delivery:
   redis:
     active-user-key: active-users
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+   
