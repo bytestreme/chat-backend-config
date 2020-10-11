@@ -1,0 +1,16 @@
+spring:
+  data:
+    mongodb:
+      auto-index-creation: true
+
+server:
+  port: 17892
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
