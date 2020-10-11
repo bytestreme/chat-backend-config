@@ -4,7 +4,7 @@ spring:
       auto-index-creation: true
 
 server:
-  port: 17892
+  port: 0
 
 management:
   endpoints:
