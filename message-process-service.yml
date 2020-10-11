@@ -5,3 +5,12 @@ kafka:
     topic: messagesInput-topic
 server:
   port: 7777
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+   
