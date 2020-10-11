@@ -8,7 +8,7 @@ kafka:
   messagesInput:
     topic: messagesInput-topic
 server:
-  port: 8081
+  port: 9999
 
 delivery:
   redis:
