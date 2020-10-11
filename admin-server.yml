@@ -8,7 +8,7 @@ management:
       show-details: ALWAYS
    
 server:
-  port: 9696
+  port: 0
 eureka:
   instance:
     hostname: localhost
