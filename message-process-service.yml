@@ -1,0 +1,7 @@
+kafka:
+  bootstrap:
+    servers: localhost:9092
+  messagesInput:
+    topic: messagesInput-topic
+server:
+  port: 7777
