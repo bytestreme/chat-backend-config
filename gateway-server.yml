@@ -1,5 +1,46 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: message-process-service
+          uri: lb://message-process-service/
+          predicates:
+            - Path=/ws/send
+          filters:
+            - CustomFilter
+        - id: message-delivery-service
+          uri: lb://message-delivery-service/
+          predicates:
+            - Path=/ws/get
+          filters:
+            - CustomFilter
+  data:
+    mongodb:
+      auto-index-creation: true
+  redis:
+    port: 6379
+    host: localhost
+    
 server:
   port: 8080
+  
+jwt:
+  ws-auth-prefix: "auth"
+  http-auth-header-prefix: "Bearer "
+  key: "devglan123r"
+  roles-claim: "roles"
+  token-version-claim: "token-version"
+  
+headers:
+  gateway:
+    user-id-forwarded: "X-G-User"
+    user-roles-forwarded: "X-G-Roles"
+    user-roles-delimiter: ","
+    
+redis:
+  token-version-key: "token-version"
+  disconnect-event-topic: "disconnect-with-token"  
+  
 eureka:
   instance:
     hostname: localhost
@@ -9,6 +50,7 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+      
 management:
   endpoints:
     web:
@@ -17,4 +59,3 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
-   
