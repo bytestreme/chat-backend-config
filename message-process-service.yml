@@ -21,6 +21,11 @@ management:
     health:
       show-details: ALWAYS
       
+headers:
+  gateway:
+    user-id-forwarded: "X-G-User"
+    user-roles-forwarded: "X-G-Roles"
+    
 eureka:
   instance:
     hostname: localhost
