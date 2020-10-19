@@ -3,16 +3,28 @@ spring:
     host: localhost
     port: 6379
 kafka:
+  consumer-group: "messages-input-group"
+  auto-reset-config: "earliest"
   bootstrap:
     servers: localhost:9092
   messagesInput:
     topic: messagesInput-topic
+    
 server:
   port: 0
 
-delivery:
-  redis:
-    active-user-key: active-users
+headers:
+  gateway:
+    user-id-forwarded: "X-G-User"
+    user-roles-forwarded: "X-G-Roles"
+
+redis:
+  disconnect-event-topic: "disconnect-with-token"
+
+ws:
+  route:
+    get-messages: "/ws/get"
+    
 management:
   endpoints:
     web:
@@ -21,6 +33,7 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+      
 eureka:
   instance:
     hostname: localhost
@@ -29,4 +42,4 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/   
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
