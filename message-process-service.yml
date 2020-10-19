@@ -22,7 +22,7 @@ management:
       show-details: ALWAYS
       
 headers:
-  message-not-delivered-key: SEND_SUCCESS
+  message-delivered-key: SEND_SUCCESS
   message-not-delivered-key: SEND_FAIL
   gateway:
     user-id-forwarded: "X-G-User"
