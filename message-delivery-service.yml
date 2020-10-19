@@ -5,7 +5,8 @@ spring:
   data:
     mongodb:
       database: delivery-service
-
+      auto-index-creation: true
+      
 kafka:
   consumer-group: "messages-input-group"
   auto-reset-config: "earliest"
