@@ -5,7 +5,7 @@ spring:
     
 kafka:
   bootstrap:
-    servers: localhost:9092
+    servers: "localhost:9092"
   messagesInput:
     topic: messagesInput-topic
     
