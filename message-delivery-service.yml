@@ -2,7 +2,10 @@ spring:
   redis:
     host: localhost
     port: 6379
-    
+  data:
+    mongodb:
+      database: delivery-service
+
 kafka:
   consumer-group: "messages-input-group"
   auto-reset-config: "earliest"
@@ -10,7 +13,7 @@ kafka:
     servers: localhost:9092
   messagesInput:
     topic: messagesInput-topic
-    
+
 server:
   port: 0
 
@@ -25,7 +28,7 @@ redis:
 ws:
   route:
     get-messages: "/ws/get"
-    
+
 management:
   endpoints:
     web:
@@ -34,7 +37,7 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
-      
+
 eureka:
   instance:
     hostname: localhost
