@@ -10,7 +10,7 @@ kafka:
     topic: messagesInput-topic
     
 server:
-  port: 65432
+  port: ${INSTANCE_PORT:65432}
   
 management:
   endpoints:
