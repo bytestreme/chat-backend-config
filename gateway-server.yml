@@ -19,7 +19,7 @@ spring:
       auto-index-creation: true
   redis:
     port: 6379
-    host: localhost
+    host: host.docker.internal
     
 server:
   port: 8080
@@ -43,7 +43,7 @@ redis:
   
 eureka:
   instance:
-    hostname: localhost
+    hostname: host.docker.internal
     leaseRenewalIntervalInSeconds: 5
   client:
     registerWithEureka: true
