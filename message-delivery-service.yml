@@ -1,6 +1,6 @@
 spring:
   redis:
-    host: localhost
+    host: host.docker.internal
     port: 6379
   data:
     mongodb:
@@ -11,7 +11,7 @@ kafka:
   consumer-group: "messages-input-group"
   auto-reset-config: "earliest"
   bootstrap:
-    servers: localhost:9092
+    servers: host.docker.internal:9092
   messagesInput:
     topic: messagesInput-topic
 
