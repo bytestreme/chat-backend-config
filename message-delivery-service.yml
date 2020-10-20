@@ -16,7 +16,7 @@ kafka:
     topic: messagesInput-topic
 
 server:
-  port: 0
+  port: 45612
 
 headers:
   gateway:
