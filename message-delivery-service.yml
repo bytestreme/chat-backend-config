@@ -4,6 +4,7 @@ spring:
     port: 6379
   data:
     mongodb:
+      host: host.docker.internal
       database: delivery-service
       auto-index-creation: true
       
