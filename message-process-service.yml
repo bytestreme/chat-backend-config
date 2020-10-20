@@ -1,11 +1,11 @@
 spring:
   redis:
-    host: localhost
+    host: host.docker.internal
     port: 6379
     
 kafka:
   bootstrap:
-    servers: "localhost:9092"
+    servers: "host.docker.internal:9092"
   messagesInput:
     topic: messagesInput-topic
     
@@ -28,7 +28,7 @@ headers:
     
 eureka:
   instance:
-    hostname: localhost
+    hostname: host.docker.internal
     leaseRenewalIntervalInSeconds: 5
   client:
     registerWithEureka: true
