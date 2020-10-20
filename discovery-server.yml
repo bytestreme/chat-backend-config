@@ -2,7 +2,7 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: localhost
+    hostname: host.docker.internal
     leaseRenewalIntervalInSeconds: 5
   client:
     registerWithEureka: false
