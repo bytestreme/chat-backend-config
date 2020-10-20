@@ -28,6 +28,7 @@ headers:
     
 eureka:
   instance:
+    instanceId: ${spring.application.name}:${random.int}
     hostname: host.docker.internal
     leaseRenewalIntervalInSeconds: 5
   client:
