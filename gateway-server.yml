@@ -14,6 +14,13 @@ spring:
             - Path=/ws/get
           filters:
             - CustomFilter
+        - id: users-search-service
+          uri: lb://users-search-service/
+          predicates:
+            - Path=/users/**
+          filters:
+            - CustomFilter
+            
   data:
     mongodb:
       auto-index-creation: true
