@@ -17,6 +17,10 @@ spring:
   data:
     mongodb:
       auto-index-creation: true
+      host: host.docker.internal
+      database: gateway-users
+
+
   redis:
     port: 6379
     host: host.docker.internal
