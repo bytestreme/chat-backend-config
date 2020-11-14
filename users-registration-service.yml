@@ -1,10 +1,12 @@
 spring:
   data:
-    mongodb:
-      auto-index-creation: true
-      host: host.docker.internal
-      database: chat-users
-      port: ${MONGO_PORT:27017}
+    cassandra:
+      keyspace-name: user-keyspace
+      port: 9042
+      local-datacenter: datacenter1
+      password: cassandra
+      username: cassandra
+      base-packages: com.example.usersregistrationservice.model
     
 server:
   port: ${INSTANCE_PORT:43112}
