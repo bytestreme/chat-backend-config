@@ -25,7 +25,7 @@ spring:
     mongodb:
       auto-index-creation: true
       host: host.docker.internal
-      database: gateway-users
+      database: chat-users
       port: ${MONGO_PORT:27017}
 
   redis:
