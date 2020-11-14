@@ -7,19 +7,19 @@ spring:
           predicates:
             - Path=/ws/send
           filters:
-            - CustomFilter
+            - AuthFilter
         - id: message-delivery-service
           uri: lb://message-delivery-service/
           predicates:
             - Path=/ws/get
           filters:
-            - CustomFilter
+            - AuthFilter
         - id: users-search-service
           uri: lb://users-search-service/
           predicates:
             - Path=/users/**
           filters:
-            - CustomFilter
+            - AuthFilter
         - id: users-registration-service
           uri: lb://users-registration-service/
           predicates:
