@@ -24,7 +24,12 @@ spring:
           uri: lb://users-registration-service/
           predicates:
             - Path=/register      
-            
+        - id: message-archive-service
+          uri: lb://message-archive-service/
+          predicates:
+            - Path=/messages/**
+          filters:
+            - AuthFilter
             
   data:
     mongodb:
