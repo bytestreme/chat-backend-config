@@ -1,7 +1,7 @@
 spring:
   data:
     cassandra:
-      keyspace-name: user-keyspace
+      keyspace-name: userkeyspace
       port: 9042
       local-datacenter: datacenter1
       password: cassandra
