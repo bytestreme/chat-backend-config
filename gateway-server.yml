@@ -20,6 +20,11 @@ spring:
             - Path=/users/**
           filters:
             - CustomFilter
+        - id: users-registration-service
+          uri: lb://users-registration-service/
+          predicates:
+            - Path=/register      
+            
             
   data:
     mongodb:
