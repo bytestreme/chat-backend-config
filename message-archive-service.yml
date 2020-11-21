@@ -11,7 +11,7 @@ spring:
       local-datacenter: datacenter1
       password: cassandra
       username: cassandra
-      base-packages: com.example.messagedeliveryservice.model
+      base-packages: com.example.messagearchiveservice.model
     
 server:
   port: ${INSTANCE_PORT:42212}
