@@ -2,10 +2,6 @@ spring:
   redis:
     host: host.docker.internal
     port: 6379
-  data:
-    mongodb:
-      host: host.docker.internal
-      port: ${MONGO_PORT:27017}
     
 kafka:
   bootstrap:
