@@ -5,6 +5,13 @@ spring:
       host: host.docker.internal
       database: chat-messages
       port: ${MONGO_PORT:27017}
+    cassandra:
+      keyspace-name: userkeyspace
+      port: 9042
+      local-datacenter: datacenter1
+      password: cassandra
+      username: cassandra
+      base-packages: com.example.messagedeliveryservice.model
     
 server:
   port: ${INSTANCE_PORT:42212}
