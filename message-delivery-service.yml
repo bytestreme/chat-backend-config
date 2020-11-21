@@ -8,6 +8,13 @@ spring:
       database: chat-messages
       auto-index-creation: true
       port: ${MONGO_PORT:27017}
+    cassandra:
+      keyspace-name: userkeyspace
+      port: 9042
+      local-datacenter: datacenter1
+      password: cassandra
+      username: cassandra
+      base-packages: com.example.messagedeliveryservice.model
       
 kafka:
   consumer-group: "messages-input-group"
