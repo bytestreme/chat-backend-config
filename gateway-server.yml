@@ -34,13 +34,13 @@ spring:
   data:
     mongodb:
       auto-index-creation: true
-      host: host.docker.internal
+      host: localhost
       database: chat-users
       port: ${MONGO_PORT:27017}
 
   redis:
     port: 6379
-    host: host.docker.internal
+    host: localhost
     
 server:
   port: 8080
@@ -64,7 +64,7 @@ redis:
   
 eureka:
   instance:
-    hostname: host.docker.internal
+    hostname: localhost
     leaseRenewalIntervalInSeconds: 5
   client:
     registerWithEureka: true
