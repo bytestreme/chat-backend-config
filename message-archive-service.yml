@@ -2,7 +2,7 @@ spring:
   data:
     mongodb:
       auto-index-creation: true
-      host: host.docker.internal
+      host: localhost
       database: chat-messages
       port: ${MONGO_PORT:27017}
     cassandra:
@@ -25,7 +25,7 @@ headers:
 eureka:
   instance:
     instanceId: ${spring.application.name}:${random.int}
-    hostname: host.docker.internal
+    hostname: localhost
     leaseRenewalIntervalInSeconds: 5
   client:
     registerWithEureka: true
